@@ -12,6 +12,7 @@
   --azul-500: #000a4a;
   --azul-600: #29389a;
   --sp-128: 12.8rem;
+  --sp-64: 6.4rem;
 }
 
 * {
@@ -341,6 +342,40 @@ a {
   margin-top: 6.4rem;
 }
 
+.footer-pre-2024 {
+  background: var(--azul-500);
+  color: var(--branco);
+  padding: var(--sp-64) 2rem;
+}
+
+.footer-pre-content {
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.footer-pre-content h3 {
+  text-transform: uppercase;
+}
+
+.footer-pre-content .logo {
+  max-width: 22rem;
+  margin-top: 1.2rem;
+}
+
+.footer-pre-content .hashtag {
+  text-transform: uppercase;
+}
+
+.footer-pre-content .social-media-lista {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.social-media-icon {
+  width: 2.4rem;
+}
+
 /* media-query */
 
 @media only screen and (max-width: 960px) {
@@ -351,10 +386,42 @@ a {
   .aprovado {
     width: 50%;
   }
+
+  .curso-extensivo-card {
+    min-width: 28rem;
+  }
 }
 
 @media only screen and (max-width: 560px) {
   :root {
     --sp-128: 6.4rem;
+    --sp-64: 3.2rem;
+  }
+
+  /* geral */
+
+  .fs-48 {
+    font-size: 4rem;
+  }
+
+  .fs-40 {
+    font-size: 3.2rem;
+    line-height: 120%;
+  }
+
+  .fs-20 {
+    font-size: 1.8rem;
+    line-height: 130%;
+  }
+
+  .fs-14 {
+    font-size: 1.4rem;
+    line-height: 140%;
+  }
+
+  /* aprovados-lista */
+
+  .aprovado-nome {
+    font-size: 1.4rem;
   }
 }
