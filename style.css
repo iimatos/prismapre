@@ -11,6 +11,7 @@
   --azul-400: #040d47;
   --azul-500: #000a4a;
   --azul-600: #29389a;
+  --sp-128: 12.8rem;
 }
 
 * {
@@ -193,7 +194,7 @@ a {
 /* extensivo */
 
 .pre-extensivo {
-  padding: 12.8rem 2rem;
+  padding: var(--sp-128) 2rem;
 }
 
 .section-spacing .container > h2 {
@@ -239,7 +240,7 @@ a {
 
 .pre-biologicas {
   background: var(--cinza);
-  padding: 12.8rem 2rem;
+  padding: var(--sp-128) 2rem;
   position: relative;
   overflow: hidden;
   z-index: 5;
@@ -296,7 +297,7 @@ a {
 /* revisa-enem */
 
 .revisa-enem {
-  padding: 12.8rem 0;
+  padding: var(--sp-128) 0;
 }
 
 .revisa-enem .flex-h {
@@ -349,5 +350,11 @@ a {
 
   .aprovado {
     width: 50%;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  :root {
+    --sp-128: 6.4rem;
   }
 }
