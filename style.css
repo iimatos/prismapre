@@ -299,6 +299,47 @@ a {
   padding: 12.8rem 0;
 }
 
+.revisa-enem .flex-h {
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.vantagens-lista {
+  margin-top: 6.4rem;
+}
+
+.vantagem-card {
+  margin: 0 auto;
+  max-width: 96rem;
+  border: 2px solid var(--azul-brand);
+  padding: 4.8rem 1.6rem;
+  background: var(--branco);
+}
+
+.vantagem-card + .vantagem-card {
+  margin-top: 2.4rem;
+}
+
+.vantagem-titulo {
+  margin-bottom: 2.4rem;
+}
+
+.vantagem-lista-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.vantagem-lista-inner-item {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.revisa-enem .btn-primary {
+  margin-top: 6.4rem;
+}
+
 /* media-query */
 
 @media only screen and (max-width: 960px) {
