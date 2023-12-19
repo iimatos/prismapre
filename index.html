@@ -14,9 +14,9 @@
     <title>Prisma Pré-vestibular 2024</title>
   </head>
   <body class="pre-2024">
-    <svg>
-      <filter id="grainy">
-        <ferturbulence basefrequency="0.65"></ferturbulence>
+    <svg style="display: none">
+      <filter id="noisy">
+        <feTurbulence type="turbulence" baseFrequency="0.65" />
       </filter>
     </svg>
     <main>
@@ -141,6 +141,20 @@
           </div>
         </div>
         <div class="gradient-circle"></div>
+        <div class="gradient-circle"></div>
+        <div class="noisy-container"></div>
+      </section>
+
+      <section class="revisa-enem section-spacing">
+        <div class="container">
+          <h2 class="fs-40 text-center">Revisa + Enem</h2>
+          <p class="fs-20 text-center section-subtitle">
+            Nosso curso de sábado é direcionado para a prática de questões do
+            Enem, complementando a base teórica. Perfeito para alunos do Ensino
+            Médio ou Pré-vestibular que buscam aprimorar seus conhecimentos.
+            Inscreva-se e aprofunde sua preparação para o sucesso no Enem!
+          </p>
+        </div>
       </section>
     </main>
     <script type="module" src="/main.js"></script>
