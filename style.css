@@ -124,6 +124,10 @@ a {
   margin: 0 auto;
 }
 
+.download-link {
+  border-bottom: 1px solid var(--azul-500);
+}
+
 /* hero */
 
 .hero {
@@ -315,7 +319,8 @@ a {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 96rem;
-  border: 2px solid var(--azul-brand);
+  /* border: 2px solid var(--azul-brand); */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), 2px 2px 24px rgba(0, 0, 0, 0.01);
   background: var(--branco);
   gap: 4.8rem;
 }
@@ -356,6 +361,95 @@ a {
   margin-top: 6.4rem;
 }
 
+/* tabela */
+
+.tabela-precos {
+  background: var(--cinza);
+  padding: var(--sp-128) 2rem;
+  border-bottom: 1px solid var(--verde-brand);
+}
+
+.table-wrapper {
+  overflow: auto;
+}
+
+.precos {
+  margin-top: var(--sp-64);
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  text-align: center;
+  min-width: 90rem;
+  overflow: auto;
+}
+
+.precos th {
+  padding: 1rem;
+  background: var(--azul-500);
+  color: var(--cinza);
+}
+
+.table-wrapper:nth-of-type(2) .precos th {
+  background: var(--vermelho-brand);
+}
+
+.precos td {
+  padding: 1.6rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.precos tr td:nth-child(1) {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.combo-plus {
+  padding: var(--sp-64) 2rem 0;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.combo-plus .desconto-titulo {
+  background: linear-gradient(
+    to right,
+    var(--azul-brand) 25%,
+    var(--verde-brand) 50%,
+    var(--laranja-brand) 75%,
+    var(--vermelho-brand)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.cards-desconto {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 1.2rem;
+}
+
+.card-desconto {
+  min-width: 28rem;
+  align-items: center;
+  gap: 1.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 1.6rem;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.04);
+}
+
+.card-desconto-titulo {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.combo-plus .btn-primary {
+  margin-top: 1.2rem;
+}
+
+/* footer */
+
 .footer-pre-2024 {
   background: var(--azul-500);
   color: var(--branco);
@@ -388,6 +482,19 @@ a {
 
 .social-media-icon {
   width: 2.4rem;
+}
+
+/* whatsapp fixed */
+
+.whatsapp-fixed {
+  position: fixed;
+  right: 2.4rem;
+  bottom: 2.4rem;
+  z-index: 100;
+}
+
+.whatsapp-fixed svg {
+  width: 4rem;
 }
 
 /* media-query */
@@ -452,5 +559,22 @@ a {
 
   .aprovado-nome {
     font-size: 1.4rem;
+  }
+
+  /* tabela precos */
+
+  .precos td {
+    padding: 0.8rem;
+  }
+
+  /* whats fixed */
+
+  .whatsapp-fixed {
+    right: 1.6rem;
+    bottom: 1.6rem;
+  }
+
+  .whatsapp-fixed svg {
+    width: 2.8rem;
   }
 }
