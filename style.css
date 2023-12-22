@@ -60,11 +60,11 @@ a {
 }
 
 .flex-h {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .flex-v {
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .text-center {
@@ -128,10 +128,49 @@ a {
   border-bottom: 1px solid var(--azul-500);
 }
 
+/* nav */
+.header-pre {
+  text-align: center;
+  background: var(--azul-500);
+  color: var(--cinza);
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-pre .desafio-titulo {
+  text-transform: uppercase;
+}
+
+.header-pre nav {
+  justify-content: center;
+}
+
+.header-pre .nav-left {
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.header-pre .btn-header {
+  border: 1px solid var(--cinza);
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.header-pre .btn-header:hover {
+  background: var(--branco);
+  color: var(--azul-500);
+}
+
 /* hero */
 
 .hero {
   position: relative;
+  margin-top: 4rem;
 }
 
 .hero:before {
@@ -305,7 +344,7 @@ a {
   padding: var(--sp-128) 0;
 }
 
-.revisa-enem .flex-h {
+.revisa-enem .flex-v {
   align-items: center;
   padding: 0 2rem;
 }
@@ -366,7 +405,10 @@ a {
 .tabela-precos {
   background: var(--cinza);
   padding: var(--sp-128) 2rem;
-  border-bottom: 1px solid var(--verde-brand);
+}
+
+.tabela-precos .container > p + p {
+  margin-top: 1.2rem;
 }
 
 .table-wrapper {
@@ -395,13 +437,25 @@ a {
 
 .precos td {
   padding: 1.6rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 10, 74, 0.5);
 }
 
 .precos tr td:nth-child(1) {
   text-transform: uppercase;
   font-weight: 700;
 }
+
+.taxa {
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  background: var(--azul-brand);
+  color: var(--branco);
+  padding: 1.2rem;
+}
+
+/* combo-plus */
 
 .combo-plus {
   padding: var(--sp-64) 2rem 0;
@@ -487,14 +541,28 @@ a {
 /* whatsapp fixed */
 
 .whatsapp-fixed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.4rem;
+  aspect-ratio: 1/1;
   position: fixed;
   right: 2.4rem;
   bottom: 2.4rem;
   z-index: 100;
+  padding: 0.8rem 1.2rem;
+  background: var(--verde-500);
+  border-radius: 50%;
+  box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.3);
+  transition: background 0.2s ease-in-out;
+}
+
+.whatsapp-fixed:hover {
+  background-color: green;
 }
 
 .whatsapp-fixed svg {
-  width: 4rem;
+  width: 3.2rem;
 }
 
 /* media-query */
@@ -555,6 +623,18 @@ a {
     line-height: 140%;
   }
 
+  /* hero */
+
+  .hero {
+    margin-top: 6.4rem;
+  }
+
+  /* header */
+
+  .desafio-titulo {
+    font-size: 1.4rem;
+  }
+
   /* aprovados-lista */
 
   .aprovado-nome {
@@ -565,6 +645,10 @@ a {
 
   .precos td {
     padding: 0.8rem;
+  }
+
+  .taxa {
+    font-size: 1.4rem;
   }
 
   /* whats fixed */
